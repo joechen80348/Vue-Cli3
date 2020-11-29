@@ -13,8 +13,7 @@
           return this.text;
         },
         set(val) {
-          //   console.log(val);
-          this.$emit("textchange", val);
+          this.$emit("update:text", val);
         },
       },
     },

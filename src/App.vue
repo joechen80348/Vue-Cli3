@@ -1,10 +1,7 @@
 <template>
   <TitleComponent :title="title">
   </TitleComponent>
-  <InputComponent
-    :text="title"
-    @textchange="changeHandler"
-  ></InputComponent>
+  <InputComponent :text.sync="title"></InputComponent>
   <img
     alt="Vue logo"
     src="./assets/logo.png"
@@ -16,6 +13,7 @@
   import HelloWorld from "./components/HelloWorld.vue";
   import TitleComponent from "./components/Title.vue";
   import InputComponent from "./components/InputComponent/index.vue";
+
   export default {
     name: "App",
     data() {
@@ -28,11 +26,11 @@
       TitleComponent,
       InputComponent,
     },
-    methods: {
-      changeHandler(val) {
-        this.title = val;
-      },
-    },
+    // methods: {
+    //   changeHandler(val) {
+    //     this.title = val;
+    //   },
+    // },
   };
 </script>
 
